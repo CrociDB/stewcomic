@@ -4,15 +4,23 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui opengl
 
 TARGET = stewcomic
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        stewcomic.cpp
+        stewcomic.cpp \
+    viewerwidget.cpp
 
-HEADERS  += stewcomic.h
+HEADERS  += stewcomic.h \
+    viewerwidget.h
 
 FORMS    += stewcomic.ui
+
+OTHER_FILES += \
+    img/open.png
+
+RESOURCES += \
+    res.qrc

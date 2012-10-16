@@ -1,7 +1,6 @@
 #ifndef VIEWERWIDGET_H
 #define VIEWERWIDGET_H
 
-#include <QtOpenGL/QGLWidget>
 #include <QtWebKit>
 
 class ViewerWidget : public QWebView

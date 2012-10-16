@@ -1,6 +1,8 @@
 #ifndef STEWCOMIC_H
 #define STEWCOMIC_H
 
+#define __MACOS__
+
 #include <QMainWindow>
 
 namespace Ui {

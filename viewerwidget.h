@@ -2,17 +2,15 @@
 #define VIEWERWIDGET_H
 
 #include <QtOpenGL/QGLWidget>
+#include <QtWebKit>
 
-class ViewerWidget : public QGLWidget
+class ViewerWidget : public QWebView
 {
     Q_OBJECT
 public:
     explicit ViewerWidget(QWidget *parent = 0);
 
 protected:
-    void initializeGL();
-    void paintGL();
-    void resizeGL(int w, int h);
     
 signals:
     

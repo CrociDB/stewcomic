@@ -11,6 +11,7 @@ Well. There are great free (and opensource) comic viewers around, but I just wan
 Features
 -----------
 
+* Cross-platform
 * CBZ / CBR files
 * Double page display
 * Manga reading (backwards)

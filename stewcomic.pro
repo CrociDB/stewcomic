@@ -61,7 +61,11 @@ SOURCES += main.cpp\
     7z_C/7zDecode.c \
     7z_C/7zCrc.c \
     7z_C/7zBuf.c \
-    7z_C/7zAlloc.c
+    7z_C/7zAlloc.c \
+    exceptions/ioexception.cpp \
+    exceptions/exception.cpp \
+    fileextractor.cpp \
+    directorytools.cpp
 
 HEADERS  += stewcomic.h \
     viewerwidget.h \
@@ -115,7 +119,11 @@ HEADERS  += stewcomic.h \
     7z_C/7zDecode.h \
     7z_C/7zCrc.h \
     7z_C/7zBuf.h \
-    7z_C/7zAlloc.h
+    7z_C/7zAlloc.h \
+    exceptions/ioexception.h \
+    exceptions/exception.h \
+    fileextractor.h \
+    directorytools.h
 
 FORMS    += stewcomic.ui
 

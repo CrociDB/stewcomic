@@ -1,9 +1,12 @@
 #ifndef STEWCOMIC_H
 #define STEWCOMIC_H
 
-#define __MACOS__
-
 #include <QMainWindow>
+#include <QFileDialog>
+#include <QMessageBox>
+
+#include "directorytools.h"
+#include "fileextractor.h"
 
 namespace Ui {
 class stewcomic;
@@ -19,6 +22,10 @@ public:
     
 private:
     Ui::stewcomic *ui;
+    DirectoryTools dir_tool;
+
+private slots:
+    void on_actionOpen_triggered();
 };
 
 #endif // STEWCOMIC_H

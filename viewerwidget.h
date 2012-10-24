@@ -14,7 +14,7 @@ protected:
 signals:
     
 public slots:
-    
+
 };
 
 #endif // VIEWERWIDGET_H

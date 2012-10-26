@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui webkit
+QT       += core gui
 
 TARGET = stewcomic
 TEMPLATE = app
@@ -65,7 +65,8 @@ SOURCES += main.cpp\
     exceptions/ioexception.cpp \
     exceptions/exception.cpp \
     fileextractor.cpp \
-    directorytools.cpp
+    directorytools.cpp \
+    comic.cpp
 
 HEADERS  += stewcomic.h \
     viewerwidget.h \
@@ -123,7 +124,8 @@ HEADERS  += stewcomic.h \
     exceptions/ioexception.h \
     exceptions/exception.h \
     fileextractor.h \
-    directorytools.h
+    directorytools.h \
+    comic.h
 
 FORMS    += stewcomic.ui
 

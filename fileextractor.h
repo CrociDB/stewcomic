@@ -13,13 +13,20 @@
 class FileExtractor
 {
 private:
-    static QDir& createDir(QString filename, QDir &dir);
-    static void fexError(fex_err_t err);
+    QString fileName;
+    QString treatedName;
+    QDir extractedDir;
+
+    QDir& createDir(QDir &dir);
+    void fexError(fex_err_t err);
+    QString treatName();
+
 
 public:
-    FileExtractor();
+    FileExtractor(QString filename, QDir &dir);
 
-    static void extractFile(QString filename, QDir& dir);
+    void extractFile();
+    QDir& getDir();
 };
 
 #endif // FILEEXTRACTOR_H

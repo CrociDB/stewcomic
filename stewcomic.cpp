@@ -17,5 +17,12 @@ void stewcomic::on_actionOpen_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this, "Open Image", QDir::homePath(), "Comics (*.cbz *.cbr)");
 
-    FileExtractor::extractFile(fileName, dir_tool.dir());
+    QFile testFile(fileName);
+    if (!testFile.exists()) return;
+
+    FileExtractor fe(fileName, dir_tool.dir());
+    fe.extractFile();
+
+    ViewerWidget *widget = this->findChild<ViewerWidget*>("widget");
+    widget->openComic(Comic(fe.getDir()));
 }

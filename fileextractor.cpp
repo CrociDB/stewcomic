@@ -1,34 +1,32 @@
 #include "fileextractor.h"
 
-QDir& FileExtractor::createDir(QString filename, QDir &dir)
+QDir& FileExtractor::createDir(QDir &dir)
 {
     QDir *extractDir = new QDir(dir);
 
-    QString newDirName(filename);
-    newDirName.remove(QRegExp("[^\\]*[\\]"));
-    newDirName.remove(QRegExp("[^/]*[/]"));
-    newDirName.remove(QRegExp("[ #@!$]|[.].*"));
-
-    if (!extractDir->exists(newDirName))
+    if (!extractDir->exists(treatedName))
     {
-        extractDir->mkdir(newDirName);
+        extractDir->mkdir(treatedName);
     }
-    extractDir->cd(newDirName);
+    extractDir->cd(treatedName);
 
     return *extractDir;
 }
 
-void FileExtractor::extractFile(QString filename, QDir &dir)
+QString FileExtractor::treatName()
 {
-    if (filename == NULL) return;
+    QString newDirName(fileName);
+    newDirName.remove(QRegExp("[^\\]*[\\]"));
+    newDirName.remove(QRegExp("[^/]*[/]"));
+    newDirName.remove(QRegExp("[ #@!$]|[.].*"));
 
-    QFile testFile(filename);
-    if (!testFile.exists()) return;
+    return newDirName;
+}
 
-    QDir newDir = FileExtractor::createDir(filename, dir);
-
+void FileExtractor::extractFile()
+{
     fex_t *fex;
-    FileExtractor::fexError(fex_open(&fex, filename.toLocal8Bit().data()));
+    FileExtractor::fexError(fex_open(&fex, fileName.toLocal8Bit().data()));
 
     int file_counter = 0;
     while (!fex_done(fex))
@@ -48,9 +46,11 @@ void FileExtractor::extractFile(QString filename, QDir &dir)
             filename = ".png";
         }
 
-        filename.prepend(QString::number(file_counter++));
+        QString num;
+        num.sprintf("%06d", file_counter++);
+        filename.prepend(num);
         filename.prepend("/");
-        filename.prepend(newDir.absolutePath());
+        filename.prepend(extractedDir.absolutePath());
 
         fex_stat(fex);
         int data_size = fex_size(fex);
@@ -69,6 +69,11 @@ void FileExtractor::extractFile(QString filename, QDir &dir)
     fex_close(fex);
 }
 
+QDir &FileExtractor::getDir()
+{
+    return extractedDir;
+}
+
 void FileExtractor::fexError(fex_err_t err)
 {
     if ( err != NULL )
@@ -79,7 +84,9 @@ void FileExtractor::fexError(fex_err_t err)
     }
 }
 
-
-FileExtractor::FileExtractor()
+FileExtractor::FileExtractor(QString filename, QDir& dir)
 {
+    fileName = filename;
+    treatedName = treatName();
+    extractedDir = createDir(dir);
 }

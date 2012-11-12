@@ -21,7 +21,7 @@ Features
 State
 --------------
 
-Very, very, very early stage of development. I basically created a project on Qt Creator. That's it.
+Very, very, very early stage of development. It can open CBR/CBZ files and simply display a demo of a page on screen.
 
 Contribute
 --------------

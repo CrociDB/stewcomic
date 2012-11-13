@@ -66,7 +66,8 @@ SOURCES += main.cpp\
     exceptions/exception.cpp \
     fileextractor.cpp \
     directorytools.cpp \
-    comic.cpp
+    comic.cpp \
+    comicpage.cpp
 
 HEADERS  += stewcomic.h \
     viewerwidget.h \
@@ -125,7 +126,8 @@ HEADERS  += stewcomic.h \
     exceptions/exception.h \
     fileextractor.h \
     directorytools.h \
-    comic.h
+    comic.h \
+    comicpage.h
 
 FORMS    += stewcomic.ui
 

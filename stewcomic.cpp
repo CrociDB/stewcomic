@@ -23,6 +23,5 @@ void stewcomic::on_actionOpen_triggered()
     FileExtractor fe(fileName, dir_tool.dir());
     fe.extractFile();
 
-    ViewerWidget *widget = this->findChild<ViewerWidget*>("widget");
-    widget->openComic(Comic(fe.getDir()));
+    ui->widget->openComic(Comic(fe.getDir()));
 }

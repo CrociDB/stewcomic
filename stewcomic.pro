@@ -62,8 +62,6 @@ SOURCES += main.cpp\
     7z_C/7zCrc.c \
     7z_C/7zBuf.c \
     7z_C/7zAlloc.c \
-    exceptions/ioexception.cpp \
-    exceptions/exception.cpp \
     fileextractor.cpp \
     directorytools.cpp \
     comic.cpp \
@@ -122,8 +120,6 @@ HEADERS  += stewcomic.h \
     7z_C/7zCrc.h \
     7z_C/7zBuf.h \
     7z_C/7zAlloc.h \
-    exceptions/ioexception.h \
-    exceptions/exception.h \
     fileextractor.h \
     directorytools.h \
     comic.h \

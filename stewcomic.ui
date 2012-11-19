@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>StewComic</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/icons/stewcomic_48</normaloff>:/icons/stewcomic_48</iconset>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
@@ -65,7 +69,7 @@
   <action name="actionOpen">
    <property name="icon">
     <iconset resource="res.qrc">
-     <normaloff>:/icons/icon_open</normaloff>:/icons/icon_open</iconset>
+     <normaloff>:/icons/stewcomic_48</normaloff>:/icons/stewcomic_48</iconset>
    </property>
    <property name="text">
     <string>&amp;Open</string>

@@ -2,6 +2,7 @@
 #define VIEWERWIDGET_H
 
 #include <QGraphicsView>
+#include <QScrollBar>
 #include <QGraphicsScene>
 #include <QtDebug>
 #include <QKeyEvent>
@@ -22,6 +23,8 @@ public:
 
 protected:
     void keyPressEvent(QKeyEvent *event);
+    void zoomIn();
+    void zoomOut();
     
 signals:
     

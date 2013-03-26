@@ -10,6 +10,7 @@ ViewerWidget::ViewerWidget(QWidget *parent) :
     currentPage = NULL;
 
     this->autoFillBackground();
+    this->setDragMode(QGraphicsView::ScrollHandDrag);
 }
 
 void ViewerWidget::openComic(Comic comic)
@@ -39,6 +40,9 @@ void ViewerWidget::nextPage()
     currentPage = new ComicPage();
     currentPage->loadFile(fileInfo[currentPageNumber]);
     scene->addItem(currentPage);
+
+    QScrollBar *y = this->verticalScrollBar();
+    y->setValue(0);
 }
 
 void ViewerWidget::previousPage()
@@ -50,6 +54,9 @@ void ViewerWidget::previousPage()
     currentPage = new ComicPage();
     currentPage->loadFile(fileInfo[currentPageNumber]);
     scene->addItem(currentPage);
+
+    QScrollBar *y = this->verticalScrollBar();
+    y->setValue(0);
 }
 
 void ViewerWidget::keyPressEvent(QKeyEvent *event)
@@ -62,4 +69,32 @@ void ViewerWidget::keyPressEvent(QKeyEvent *event)
     {
         previousPage();
     }
+    else if (event->key() == Qt::Key_Down)
+    {
+        QScrollBar *y = this->verticalScrollBar();
+        y->setValue(y->value() + 20);
+    }
+    else if (event->key() == Qt::Key_Up)
+    {
+        QScrollBar *y = this->verticalScrollBar();
+        y->setValue(y->value() - 20);
+    }
+    else if (event->key() == Qt::Key_Equal)
+    {
+        zoomIn();
+    }
+    else if (event->key() == Qt::Key_Minus)
+    {
+        zoomOut();
+    }
+}
+
+void ViewerWidget::zoomIn()
+{
+    scale(1.1, 1.1);
+}
+
+void ViewerWidget::zoomOut()
+{
+    scale(0.9, 0.9);
 }

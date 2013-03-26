@@ -1,12 +1,12 @@
 StewComic
 =========
 
-StewComic is a Qt-based comic viewer.
+StewComic is a Qt-based digital comic viewer.
 
 Why the deuce another comic viewer?
 -----------
 
-Well. There are great free (and opensource) comic viewers around, but I just wanted to do something a little different. Or not that different at all. I just wanted to make one myself.
+Well. There are great free (and opensource) comic viewers around, but I can see that most of them have issues with user interface or user experience. Stewcomic is designed to be the ultimate experience with digital comic reading.
 
 Features
 -----------
@@ -15,13 +15,21 @@ Features
 * CBZ / CBR files
 * Double page display
 * Manga reading (backwards)
-* Comic Library
 * Frame-by-frame view
+* Comic Library
+* Webcomic feed subscription
 
 State
 --------------
 
 Very, very, very early stage of development. It can open CBR/CBZ files and simply display a demo of a page on screen.
+
+How does it look now?
+--------------
+
+![StewComic](http://i.imgur.com/xQ1LuTb.jpg)
+
+As you can see, UI is quite poor. But so does the entire project. User interface will probably be the last thing to be implemented, since it's being studied with caution.
 
 Contribute
 --------------
@@ -38,4 +46,3 @@ If you want to help this project, all you need is:
 * Passion for comics
 
 Simple as that. Just clone the repo, open on your Qt creator (set your target, it doesn't matter which, you'll never commit the `stewcomic.pro.user` file anyway) and compile it. Then start hacking. :)
-

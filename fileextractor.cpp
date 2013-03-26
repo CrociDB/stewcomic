@@ -36,8 +36,6 @@ void FileExtractor::extractFile()
         if (fex_has_extension(fex_name(fex), ".jpg") || fex_has_extension(fex_name(fex), ".jpeg"))
         {
             filename = ".jpg";
-            treatedName = treatName();
-            extractedDir = createDir(dir);
         }
         else if (fex_has_extension(fex_name(fex), ".gif"))
         {

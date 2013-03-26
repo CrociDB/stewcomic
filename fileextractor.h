@@ -8,8 +8,6 @@
 
 #include <fex/fex.h>
 
-#include "exceptions/ioexception.h"
-
 class FileExtractor
 {
 private:

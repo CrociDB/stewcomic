@@ -1,2 +1,17 @@
-stewcomic.pro.user
+# System
 .DS_Store
+Thumbs.db
+
+
+# User project
+stewcomic.pro.user
+
+# Visual Studio
+debug/
+GeneratedFiles/
+*.sln
+*.sdf
+*.suo
+*.opensdf
+*.vcxproj*
+

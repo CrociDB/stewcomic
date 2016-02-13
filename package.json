@@ -1,0 +1,22 @@
+{
+  "name": "stewcomic",
+  "version": "0.1.0",
+  "description": "a comic viewer",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CrociDB/stewcomic.git"
+  },
+  "author": "CrociDB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrociDB/stewcomic/issues"
+  },
+  "homepage": "https://github.com/CrociDB/stewcomic",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.7"
+  }
+}

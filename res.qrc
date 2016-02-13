@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/icons">
-        <file alias="icon_open">img/open.png</file>
-        <file alias="stewcomic_48">img/stewcomic_48.png</file>
-    </qresource>
-</RCC>

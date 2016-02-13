@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/CrociDB/stewcomic",
   "devDependencies": {
-    "electron-prebuilt": "^0.36.7"
+    "electron-prebuilt": "^0.36.7",
+    "jquery": "^2.2.0",
+    "w2ui": "^1.4.3"
   }
 }

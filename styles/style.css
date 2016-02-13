@@ -1,0 +1,10 @@
+body {
+    background-color: #222222;
+    margin: 0;
+    -webkit-user-select: none;
+    cursor: context-menu;
+}
+
+#home {
+    background-color: #222222;
+}
